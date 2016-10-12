@@ -17,6 +17,19 @@ public class Player_UserInterface
         //여기서 UILabel의 컴퍼넌트를 초기화시켜준다.
     }
 }
+
+[System.Serializable]
+public class Player_Equip
+{
+    public int weapon = -1;
+    public int helmet = -1;
+    public int top = -1; // shirt
+    public int pant = -1;
+    public int suit = -1;// 한벌
+    public int shose = -1;
+}
+
+
 [System.Serializable]
 public class Player_Info {
     public Player_UserInterface player_ui;
