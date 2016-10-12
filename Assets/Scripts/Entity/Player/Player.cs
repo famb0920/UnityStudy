@@ -30,15 +30,21 @@ public class Player : Entity {
             Destroy(gameObject);
         }
     }
-    public override void Update()
+
+	public override void Start()
+	{
+		player_controller = new Player_Controller(gameObject);
+		player_info = new Player_Info(gameObject);
+	}
+	
+	public override void Update()
     {
-        player_controller.Update();
+		player_controller.Update();
         player_info.Update();
     }
-    public override void Start()
-    {
-        player_controller = new Player_Controller(gameObject);
-        player_info = new Player_Info(gameObject);
-    }
 
+	public override void FixedUpdate()
+	{
+		player_controller.FixedUpdate ();
+	}
 }
