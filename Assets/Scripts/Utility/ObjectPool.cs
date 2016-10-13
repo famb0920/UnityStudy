@@ -9,7 +9,7 @@ public class PoolData
     public string Name; // this is identity Key
     public int Size;
 }
-public class ObjectPool : MonoBehaviour
+public sealed class ObjectPool : MonoBehaviour
 {
     private static ObjectPool _instance;
     public  static ObjectPool instance
