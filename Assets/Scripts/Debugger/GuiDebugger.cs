@@ -34,6 +34,10 @@ public class GUIFunc
     {
         ObjectPool.instance.Create(ObjectPool.instance.pList[1].Prefab, new Vector3(0, 0, 0), Quaternion.identity);
     }
+    public static void Create3()
+    {
+        ObjectPool.instance.Create(ObjectPool.instance.pList[2].Prefab, new Vector3(0, 0, 0), Quaternion.identity);
+    }
 }
     public class GuiDebugger : MonoBehaviour
     {
@@ -50,9 +54,9 @@ public class GUIFunc
 
 
             CreateButton(GUIFunc.UIUpdate, 80, "UI_Update");
-            CreateButton(GUIFunc.Create, 80, "풀테스트1");
-            CreateButton(GUIFunc.Create2, 80, "풀테스트2");
-            CreateButton(GUIFunc.Func1, 80, "Method");
+            CreateButton(GUIFunc.Create, 80, "박스");
+            CreateButton(GUIFunc.Create2, 80, "캡슐");
+            CreateButton(GUIFunc.Create3, 80, "동그라미");
             CreateButton(GUIFunc.Func1, 80, "Method");
             CreateButton(GUIFunc.Func1, 80, "Method");
             CreateButton(GUIFunc.Func1, 80, "Method");
