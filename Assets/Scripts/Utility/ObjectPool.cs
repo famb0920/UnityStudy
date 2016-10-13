@@ -116,7 +116,6 @@ public sealed class ObjectPool : MonoBehaviour
 
         foreach (PoolData p in pList)
         {
-            GameObject hideObj = GetHierachyHideObject(p.prefabList); // 하이라키에서 꺼져있는 오브젝트를 가져온다.
 
             //이 프리팹이 존재하는가?
             if (p.Prefab.Equals(Prefab))
@@ -134,6 +133,7 @@ public sealed class ObjectPool : MonoBehaviour
                     break;
                 }
 
+                GameObject hideObj = GetHierachyHideObject(p.prefabList); // 하이라키에서 꺼져있는 오브젝트를 가져온다.
                 //비활성된 오브젝트를 재사용한다. (재사용되는 오브젝트로 반환)
                 if (hideObj != null)
                 {
@@ -160,4 +160,18 @@ public sealed class ObjectPool : MonoBehaviour
         return temp_go;
     }
   
+}
+
+
+public static class ObjectPoolExtention
+{
+    public static void AddPool(this GameObject obj, int size = 0)
+    {
+        ObjectPool.instance.AddPool(obj);
+    }
+
+    public static void Create(this GameObject obj)
+    {
+        ObjectPool.instance.Create(obj);
+    }
 }
