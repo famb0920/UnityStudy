@@ -24,7 +24,6 @@ public class Entity : MonoBehaviour {
 	
 	}
 
-
     // Update -> Update2 cycle
     public virtual void Update2()
     {
@@ -32,8 +31,13 @@ public class Entity : MonoBehaviour {
     }
 
 	// Update is called once per frame
-	public virtual void Update () {
+	public virtual void Update()
+	{
 	    
 	}
 
+	public virtual void FixedUpdate() 
+	{
+
+	}
 }
